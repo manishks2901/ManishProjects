@@ -2,6 +2,7 @@
 
 
 
+
 interface RootNavbarProps {
     title:string;
     MainNavbarLinks:React.FC;
@@ -22,6 +23,9 @@ const RootNavbar:React.FC<RootNavbarProps> = ({
                 <div className="hidden sm:flex flex-1 justify-center">
                     <MainNavbarLinks/>
                 </div>
+                <div className="hidden sm:flex">
+                    <p className="font-sans text-xl font-semibold underline underline-offset-1 ">En</p>
+                </div>    
                 <div className="sm:hidden flex items-center">
                     <MobileNavbar/>
                 </div>

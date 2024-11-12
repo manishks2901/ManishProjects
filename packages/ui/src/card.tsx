@@ -1,30 +1,38 @@
-import { type ReactNode } from "react";
+import Button from "./button";
+import IconButton from "./icon-button";
+import { MoveRight } from "lucide-react"
 
-export function Card({
-  title,
-  children,
-  href,
-}: {
+interface CardComponentProps {
+  imageUrl: string;
   title: string;
-  children: ReactNode;
-  href: string;
-}): JSX.Element {
-  return (
-    <a
-      className="ui-group ui-rounded-lg ui-border ui-border-transparent ui-px-5 ui-py-4 ui-transition-colors hover:ui-border-neutral-700 hover:ui-bg-neutral-800/30"
-      href={`${href}?utm_source=create-turbo&utm_medium=with-tailwind&utm_campaign=create-turbo"`}
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <h2 className="ui-mb-3 ui-text-2xl ui-font-semibold">
-        {title}{" "}
-        <span className="ui-inline-block ui-transition-transform group-hover:ui-translate-x-1 motion-reduce:ui-transform-none">
-          -&gt;
-        </span>
-      </h2>
-      <p className="ui-m-0 ui-max-w-[30ch] ui-text-sm ui-opacity-50">
-        {children}
-      </p>
-    </a>
-  );
+  description: string;
+  ButtonComponent:React.FC
 }
+
+const CardComponent: React.FC<CardComponentProps> = ({
+  imageUrl,
+  title,
+  description,
+  ButtonComponent
+}) => {
+  return (
+    <div className="flex justify-center">
+      <div
+        className="flex mt-20 h-[230px] w-[480px] rounded-3xl aspect-square overflow-hidden bg-cover justify-end"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      >
+        <div className="h-[230px] w-[300px] flex flex-col justify-between  p-4 bg-black bg-opacity-50 text-white opacity-0 hover:opacity-100 transition-opacity duration-300">
+          <div>
+              <h2 className="text-xl font-bold text-wrap">{title}</h2>
+              <p className="text-sm text-wrap">{description}</p>
+          </div>
+          <div className="flex justify-center">
+            <ButtonComponent/>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CardComponent;
