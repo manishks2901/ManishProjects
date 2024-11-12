@@ -1,21 +1,20 @@
+
+
+
+
 interface RootNavbarProps {
     title:string;
     MainNavbarLinks:React.FC;
-    MobileFilters:React.FC;
+    MobileNavbar:React.FC;
 }
-
-
-
-
-
 const RootNavbar:React.FC<RootNavbarProps> = ({
     title,
     MainNavbarLinks,
-    MobileFilters
+    MobileNavbar
 }) => {
     return ( 
         <nav>
-            <div className="relatve px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-center">
+            <div className="relatve px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
                 {/* Company's Name */}
                 <div className="lg:text-3xl sm:text-2xl font-semibold">
                     {title}
@@ -24,7 +23,7 @@ const RootNavbar:React.FC<RootNavbarProps> = ({
                     <MainNavbarLinks/>
                 </div>
                 <div className="sm:hidden flex items-center">
-                    <MobileFilters/>
+                    <MobileNavbar/>
                 </div>
 
             </div>
