@@ -18,7 +18,7 @@ const CardComponent: React.FC<CardComponentProps> = ({
   return (
     <div className="flex justify-center">
       <div
-        className="flex mt-20 h-[230px] w-[480px] rounded-3xl aspect-square overflow-hidden bg-cover justify-end"
+        className="flex mt-20 h-[240px] w-[480px] rounded-3xl aspect-square overflow-hidden bg-cover justify-end"
         style={{ backgroundImage: `url(${imageUrl})` }}
       >
         <div className="h-[230px] w-[300px] flex flex-col justify-between  p-4 bg-black bg-opacity-50 text-white opacity-0 hover:opacity-100 transition-opacity duration-300">

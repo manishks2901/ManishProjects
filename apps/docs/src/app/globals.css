@@ -64,3 +64,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.custom-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(18, 18, 18, 1.0) 20%,
+    rgba(18, 18, 18, 0.9) 31%,
+    rgba(18, 18, 18, 0.8) 39%,
+    rgba(18, 18, 18, 0.7) 48%,
+    rgba(18, 18, 18, 0.6) 55%,
+    rgba(18, 18, 18, 0.5) 63%,
+    rgba(18, 18, 18, 0.4) 70%,
+    rgba(18, 18, 18, 0.3) 78%,
+    rgba(18, 18, 18, 0.2) 84%,
+    rgba(18, 18, 18, 0.1) 100%
+  );
+}

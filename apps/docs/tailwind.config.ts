@@ -58,7 +58,17 @@ const config: Pick<Config, "content" | "presets" | "darkMode" | "plugins" | "the
     				'3': 'hsl(var(--chart-3))',
     				'4': 'hsl(var(--chart-4))',
     				'5': 'hsl(var(--chart-5))'
-    			}
+    			},
+				'black-100': 'rgba(18, 18, 18, 1.0)',  // 100% opacity
+				'black-90': 'rgba(18, 18, 18, 0.9)',
+				'black-80': 'rgba(18, 18, 18, 0.8)',
+				'black-70': 'rgba(18, 18, 18, 0.7)',
+				'black-60': 'rgba(18, 18, 18, 0.6)',
+				'black-50': 'rgba(18, 18, 18, 0.5)',
+				'black-40': 'rgba(18, 18, 18, 0.4)',
+				'black-30': 'rgba(18, 18, 18, 0.3)',
+				'black-20': 'rgba(18, 18, 18, 0.2)',
+				'black-10': 'rgba(18, 18, 18, 0.1)',
     		}
     	}
     }

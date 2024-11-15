@@ -1,9 +1,11 @@
-import { Button } from "@/components/ui/button";
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 import { SiTelegram } from "react-icons/si";
 import { RiTwitterXLine } from "react-icons/ri"
 import { SiInstagram } from "react-icons/si";
+
+import { Button } from "@/components/ui/button";
+
 
 
 const SocialMedia = () => {
